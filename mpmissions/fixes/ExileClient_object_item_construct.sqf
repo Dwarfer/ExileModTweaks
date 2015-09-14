@@ -22,7 +22,7 @@ if( isClass(configFile >> "CfgMagazines" >> _itemClassName >> "Interactions" >> 
 		if ((getPosATL player) call ExileClient_util_world_isSpawnZoneNearby) then { throw "ConstructionSpawnZoneWarning"; };
 
 		//Stops Building In Towns
-		_cnt = count nearestLocations [getPosATL player, ["NameVillage","NameCity","NameCityCapital"], 500];
+		_cnt = count nearestLocations [getPosATL player, ["NameVillage","NameCity","NameCityCapital"], 400];
 		if (_cnt > 0 ) then { throw "ConstructionAbortedInformation"; };		
 		
 		/* PREVENT BUILDING NEAR CERTAIN TYPES OF BUILDING */
